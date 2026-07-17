@@ -787,174 +787,90 @@
     </div>
 
     <script>
-      // KONFIGURASI LINK URL WEB APP GOOGLE SCRIPT
-      const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwnUbkJTGhGDpEnB0gqXlLQbTvRceXBIRWikDOXYCGLmRNIoPRxUdDfd3_KP7Caj5vq/exec";
+      // KONFIGURASI LINK URL WEB APP GOOGLE SCRIPT ANDA
+      const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzFRrnD41jJQjQy4rGCjAXHzlb5zzhfTT1oMP9ns3L_zIVAqjmsO0TkZf40SxGtB1it/exec";
 
       const defaultGuru = [
-        "Adi Putra Pamungkas",
-        "Agus Hipni Apendi",
-        "Ai Rahmawati",
-        "Ananda Putri Sutarlan",
-        "Anis Sabuh",
-        "ARMAN SARI",
-        "Cepi Ismail",
-        "DEBI HERMAWAN",
-        "DEDE SUTIYANAH",
-        "Dinda Safitri",
-        "Duduh Durahman",
-        "Ela Nurlaela",
-        "Endin Saepudin",
-        "Erdy Herdiawan",
-        "Firman Agiansyah",
-        "Galuh Ramadhan",
-        "Haripan Oktapiana",
-        "Hendi Suhendi",
-        "Heru",
-        "ILHAM MAULANA",
-        "Ipda Sulastina",
-        "Ir. Ade Ruslan",
-        "Irma Maulani",
-        "Ismi Fajarina Isnaeni",
-        "Kiki Taskiyah",
-        "M. RAMADHANY PUTRA. R",
-        "M. Rifki Ilham Sani",
-        "MUHAMAD FIRMANSYAH",
-        "Muhamad Nurhamzah",
-        "MUHAMAD RIAN HIDAYAT",
-        "MUHAMMAD HENDRY KUSUMA",
-        "Nanda Nadia Elisa",
-        "Neli Nur Ramdhani",
-        "Pepen Parlos Nasution",
-        "Prida Kusuma",
-        "RAFLY KAEZA RAMADHAN",
-        "Ratna Suminar",
-        "Robi Mulya Gunawan",
-        "Rohman",
-        "Rohman Hidayat",
-        "Roni Gandi",
-        "Siska Ambarwaty Ramdhan",
-        "Siti Rohimah",
-        "SITI SARAH",
-        "TABAH SAPUTRA WIBISONO",
-        "Tuti Anggraeni",
-        "Widya Khaerul Bariyyah",
-        "Winda Sulastri",
+        "Adi Putra Pamungkas", "Agus Hipni Apendi", "Ai Rahmawati", "Ananda Putri Sutarlan",
+        "Anis Sabuh", "ARMAN SARI", "Cepi Ismail", "DEBI HERMAWAN", "DEDE SUTIYANAH",
+        "Dinda Safitri", "Duduh Durahman", "Ela Nurlaela", "Endin Saepudin", "Erdy Herdiawan",
+        "Firman Agiansyah", "Galuh Ramadhan", "Haripan Oktapiana", "Hendi Suhendi", "Heru",
+        "ILHAM MAULANA", "Ipda Sulastina", "Ir. Ade Ruslan", "Irma Maulani", "Ismi Fajarina Isnaeni",
+        "Kiki Taskiyah", "M. RAMADHANY PUTRA. R", "M. Rifki Ilham Sani", "MUHAMAD FIRMANSYAH",
+        "Muhamad Nurhamzah", "MUHAMAD RIAN HIDAYAT", "MUHAMMAD HENDRY KUSUMA", "Nanda Nadia Elisa",
+        "Neli Nur Ramdhani", "Pepen Parlos Nasution", "Prida Kusuma", "RAFLY KAEZA RAMADHAN",
+        "Ratna Suminar", "Robi Mulya Gunawan", "Rohman", "Rohman Hidayat", "Roni Gandi",
+        "Siska Ambarwaty Ramdhan", "Siti Rohimah", "SITI SARAH", "TABAH SAPUTRA WIBISONO",
+        "Tuti Anggraeni", "Widya Khaerul Bariyyah", "Winda Sulastri"
       ];
+      
       const defaultKelas = [
-        "X PPLG 1",
-        "X PPLG 2",
-        "X PPLG 3",
-        "X PPLG 4",
-        "XI PPLG 1",
-        "XI PPLG 2",
-        "XI PPLG 3",
-        "XI PPLG 4",
-        "XII PPLG 1",
-        "XII PPLG 2",
-        "XII PPLG 3",
-        "XII PPLG 4",
-        "X DKV 1",
-        "X DKV 2",
-        "X DKV 3",
-        "X DKV 4",
-        "XI DKV 1",
-        "XI DKV 2",
-        "XI DKV 3",
-        "XI DKV 4",
-        "XII DKV 1",
-        "XII DKV 2",
-        "XII DKV 3",
-        "XII DKV 4",
-        "Gugus 1",
-        "Gugus 2",
-        "Gugus 3",
-        "Gugus 4",
-        "Gugus 5",
-        "Gugus 6",
-        "Gugus 7",
-        "Gugus 8",
-        "Gugus 9",
-        "OSIS & MPK",
+        "X PPLG 1", "X PPLG 2", "X PPLG 3", "X PPLG 4", "XI PPLG 1", "XI PPLG 2", "XI PPLG 3", "XI PPLG 4",
+        "XII PPLG 1", "XII PPLG 2", "XII PPLG 3", "XII PPLG 4", "X DKV 1", "X DKV 2", "X DKV 3", "X DKV 4",
+        "XI DKV 1", "XI DKV 2", "XI DKV 3", "XI DKV 4", "XII DKV 1", "XII DKV 2", "XII DKV 3", "XII DKV 4",
+        "Gugus 1", "Gugus 2", "Gugus 3", "Gugus 4", "Gugus 5", "Gugus 6", "Gugus 7", "Gugus 8", "Gugus 9", "OSIS & MPK"
       ];
 
-      let daftarGuru =
-        JSON.parse(localStorage.getItem("masterGuru")) || defaultGuru;
-      let daftarKelas =
-        JSON.parse(localStorage.getItem("masterKelas")) || defaultKelas;
+      let daftarGuru = JSON.parse(localStorage.getItem("masterGuru")) || defaultGuru;
+      let daftarKelas = JSON.parse(localStorage.getItem("masterKelas")) || defaultKelas;
       let isAdmin = false;
 
-      // FUNGSI UTAMA UNTUK MENGIRIM DATA HARI INI KE GOOGLE SPREADSHEET VIA WEB APP
+      // SINKRONISASI KE CLOUD (HANYA AKTIF JIKA DIOPERASIKAN OLEH ADMIN)
       function kirimDataKeCloud() {
-        // Kumpulkan data logistik saat ini
-        const masuk = parseInt(localStorage.getItem("stokMasuk")) || 0;
-        const dataKelas = JSON.parse(localStorage.getItem("dataKelas")) || [];
-        const hadirGuru = JSON.parse(localStorage.getItem("guruHadir")) || [];
-        const riwayatG = JSON.parse(localStorage.getItem("riwayatGuru")) || [];
-        const statusG = JSON.parse(localStorage.getItem("statusGuruAmbil")) || {};
-        const jatahGuruSatuan = riwayatG.length > 0 ? riwayatG[0].jatah : 0;
+        if (!isAdmin) return; 
 
-        let totalJatahTerplot = 0;
-        let totalKeluar = 0;
-        let totalKembali = 0;
-        let lostT = 0, lostB = 0, lostS = 0;
-
-        dataKelas.forEach((x) => {
-          totalJatahTerplot += Number(x.jumlah);
-          if (x.ambil) totalKeluar += Number(x.jumlah);
-          if (x.kembali) totalKembali += Number(x.jumlah);
-          lostT += x.hilangTutup || 0;
-          lostB += x.hilangBawah || 0;
-          lostS += x.hilangSepaket || 0;
-        });
-
-        let terpakaiGuru = hadirGuru.length * jatahGuruSatuan;
-        totalJatahTerplot += terpakaiGuru;
-
-        hadirGuru.forEach((n) => {
-          if (statusG[n]?.ambil) totalKeluar += jatahGuruSatuan;
-          if (statusG[n]?.kembali) totalKembali += jatahGuruSatuan;
-        });
-
-        let belumKembali = totalKeluar - totalKembali - lostS;
-        if (belumKembali < 0) belumKembali = 0;
-        let sisaDapur = masuk - totalKeluar;
-        if (sisaDapur < 0) sisaDapur = 0;
-
-        // Siapkan paket payload JSON
         const payload = {
-          tanggal: new Date().toLocaleDateString("id-ID"),
-          waktu: new Date().toLocaleTimeString("id-ID"),
-          stokMasuk: masuk,
-          totalJatah: totalJatahTerplot,
-          diambilKeluar: totalKeluar,
-          belumKembali: belumKembali,
-          sisaDapur: sisaDapur,
-          hilangTutup: lostT,
-          hilangBawah: lostB,
-          hilangSepaket: lostS
+          stokMasuk: parseInt(localStorage.getItem("stokMasuk")) || 0,
+          riwayatGuru: JSON.parse(localStorage.getItem("riwayatGuru")) || [],
+          statusGuruAmbil: JSON.parse(localStorage.getItem("statusGuruAmbil")) || {},
+          guruHadir: JSON.parse(localStorage.getItem("guruHadir")) || [],
+          dataKelas: JSON.parse(localStorage.getItem("dataKelas")) || []
         };
 
-        // Kirim menggunakan metode POST (atau GET fallback jika API memakai CORS default webapp)
         fetch(WEB_APP_URL, {
           method: "POST",
-          mode: "no-cors", 
-          headers: {
-            "Content-Type": "application/json"
-          },
+          headers: { "Content-Type": "text/plain;charset=utf-8" },
           body: JSON.stringify(payload)
         })
-        .then(() => {
-          console.log("Data berhasil disinkronkan ke Google Sheet.");
+        .then(res => res.json())
+        .then(data => console.log("Cloud Sync Success:", data))
+        .catch(err => console.error("Cloud Sync Error:", err));
+      }
+
+      // TARIK DATA REAL-TIME DARI CLOUD (UNTUK MODE GURU / PERANGKAT LAIN)
+      function muatDataDariCloud() {
+        // Jika sedang login admin, prioritaskan input admin agar tidak tabrakan saat ngetik
+        if (isAdmin) return; 
+
+        fetch(WEB_APP_URL)
+        .then(res => res.json())
+        .then(data => {
+          if (data) {
+            localStorage.setItem("stokMasuk", data.stokMasuk || 0);
+            localStorage.setItem("riwayatGuru", JSON.stringify(data.riwayatGuru || []));
+            localStorage.setItem("statusGuruAmbil", JSON.stringify(data.statusGuruAmbil || {}));
+            localStorage.setItem("guruHadir", JSON.stringify(data.guruHadir || []));
+            localStorage.setItem("dataKelas", JSON.stringify(data.dataKelas || []));
+            
+            // Perbarui antarmuka pengguna
+            renderUIRefresh();
+          }
         })
-        .catch((error) => {
-          console.error("Gagal sinkronisasi data cloud:", error);
-        });
+        .catch(err => console.error("Gagal menarik data cloud:", err));
+      }
+
+      function renderUIRefresh() {
+        let savedStok = localStorage.getItem("stokMasuk");
+        if (savedStok && document.getElementById("stokMasuk")) {
+          document.getElementById("stokMasuk").value = savedStok;
+        }
+        hitungLogistik();
+        tampilKelas();
+        tampilProsesGuru();
       }
 
       function pasangPanelRealtime() {
-        const htmlTemplate = document.getElementById(
-          "panelRealtimeTemplate",
-        ).innerHTML;
+        const htmlTemplate = document.getElementById("panelRealtimeTemplate").innerHTML;
         document.getElementById("realtimePanelKelas").innerHTML = htmlTemplate;
         document.getElementById("realtimePanelGuru").innerHTML = htmlTemplate;
       }
@@ -965,10 +881,8 @@
           if (pin === "1234") {
             isAdmin = true;
             document.body.classList.add("admin-mode");
-            document.getElementById("roleBadge").className =
-              "badge bg-success badge-role";
-            document.getElementById("roleBadge").innerText =
-              "🔓 Mode Admin Dapur";
+            document.getElementById("roleBadge").className = "badge bg-success badge-role";
+            document.getElementById("roleBadge").innerText = "🔓 Mode Admin Dapur";
             document.getElementById("btnAuth").innerText = "🔒 Logout";
             alert("Akses Admin Terbuka!");
           } else {
@@ -977,14 +891,12 @@
         } else {
           isAdmin = false;
           document.body.classList.remove("admin-mode");
-          document.getElementById("roleBadge").className =
-            "badge bg-dark border text-white badge-role";
-          document.getElementById("roleBadge").innerText =
-            "👀 Mode Viewer (Publik)";
+          document.getElementById("roleBadge").className = "badge bg-dark border text-white badge-role";
+          document.getElementById("roleBadge").innerText = "👀 Mode Viewer (Publik)";
           document.getElementById("btnAuth").innerText = "🔐 Login Admin";
           navTo("dashboard");
         }
-        hitungLogistik();
+        renderUIRefresh();
       }
 
       function toggleSidebar() {
@@ -993,15 +905,10 @@
       }
 
       function navTo(id, event) {
-        document
-          .querySelectorAll(".page")
-          .forEach((x) => x.classList.remove("active"));
+        document.querySelectorAll(".page").forEach((x) => x.classList.remove("active"));
         document.getElementById(id).classList.add("active");
-        document
-          .querySelectorAll(".sidebar a")
-          .forEach((x) => x.classList.remove("active-menu"));
-        if (event && event.currentTarget)
-          event.currentTarget.classList.add("active-menu");
+        document.querySelectorAll(".sidebar a").forEach((x) => x.classList.remove("active-menu"));
+        if (event && event.currentTarget) event.currentTarget.classList.add("active-menu");
         if (id === "rekap") muatRekap();
         if (id === "riwayat") tampilRiwayat();
         toggleSidebar();
@@ -1096,23 +1003,22 @@
 
       document.getElementById("btnSimpanGuru").onclick = function () {
         simpanKehadiranGuruEkspres();
-        alert("Absensi guru berhasil disinkronkan!");
+        kirimDataKeCloud();
+        alert("Absensi guru berhasil disinkronkan ke Cloud!");
       };
 
-      document
-        .getElementById("cariGuru")
-        .addEventListener("keyup", function () {
-          let cari = this.value.toLowerCase();
-          let html = "";
-          let hadir = JSON.parse(localStorage.getItem("guruHadir")) || [];
-          daftarGuru.forEach((nama) => {
-            if (nama.toLowerCase().includes(cari)) {
-              let cek = hadir.includes(nama) ? "checked" : "";
-              html += `<div class="form-check my-1"><input type="checkbox" class="form-check-input border-secondary guruCheck" value="${nama}" ${cek} onchange="simpanKehadiranGuruEkspres()"><label class="form-check-label fw-bold text-dark">${nama}</label></div>`;
-            }
-          });
-          document.getElementById("daftarGuru").innerHTML = html;
+      document.getElementById("cariGuru").addEventListener("keyup", function () {
+        let cari = this.value.toLowerCase();
+        let html = "";
+        let hadir = JSON.parse(localStorage.getItem("guruHadir")) || [];
+        daftarGuru.forEach((nama) => {
+          if (nama.toLowerCase().includes(cari)) {
+            let cek = hadir.includes(nama) ? "checked" : "";
+            html += `<div class="form-check my-1"><input type="checkbox" class="form-check-input border-secondary guruCheck" value="${nama}" ${cek} onchange="simpanKehadiranGuruEkspres()"><label class="form-check-label fw-bold text-dark">${nama}</label></div>`;
+          }
         });
+        document.getElementById("daftarGuru").innerHTML = html;
+      });
 
       document.getElementById("btnTambahKelas").onclick = function () {
         let kelas = document.getElementById("kelasSelect").value;
@@ -1120,42 +1026,28 @@
         if (isNaN(jumlah) || jumlah <= 0) return alert("Ketik jumlah jatah.");
 
         let data = JSON.parse(localStorage.getItem("dataKelas")) || [];
-        if (data.find((x) => x.kelas === kelas))
-          return alert("Kelas sudah ter-input!");
+        if (data.find((x) => x.kelas === kelas)) return alert("Kelas sudah ter-input!");
 
         data.push({
-          kelas: kelas,
-          jumlah: jumlah,
-          catatan: "",
-          ambil: false,
-          kembali: false,
-          tanggal: new Date().toLocaleString(),
-          hilangTutup: 0,
-          hilangBawah: 0,
-          hilangSepaket: 0,
+          kelas: kelas, jumlah: jumlah, catatan: "", ambil: false, kembali: false,
+          tanggal: new Date().toLocaleString(), hilangTutup: 0, hilangBawah: 0, hilangSepaket: 0
         });
         localStorage.setItem("dataKelas", JSON.stringify(data));
         document.getElementById("jumlahOmpreng").value = "";
         tampilKelas();
+        kirimDataKeCloud();
       };
 
       function tampilKelas() {
         let data = JSON.parse(localStorage.getItem("dataKelas")) || [];
         let html = "";
-        let kataKunci = document.getElementById("cariInputKelas")
-          ? document.getElementById("cariInputKelas").value.toLowerCase()
-          : "";
+        let kataKunci = document.getElementById("cariInputKelas") ? document.getElementById("cariInputKelas").value.toLowerCase() : "";
 
         data.forEach((item, index) => {
-          if (kataKunci && !item.kelas.toLowerCase().includes(kataKunci))
-            return;
+          if (kataKunci && !item.kelas.toLowerCase().includes(kataKunci)) return;
 
           let infoHilang = "";
-          if (
-            item.hilangTutup > 0 ||
-            item.hilangBawah > 0 ||
-            item.hilangSepaket > 0
-          ) {
+          if (item.hilangTutup > 0 || item.hilangBawah > 0 || item.hilangSepaket > 0) {
             infoHilang = `<div class="text-danger mt-1 font-monospace fw-bold" style="font-size:12px;">🔴 Kasus Kehilangan: Tutup(${item.hilangTutup}) | Bawah(${item.hilangBawah}) | Paket(${item.hilangSepaket})</div>`;
           }
           html += `
@@ -1195,16 +1087,14 @@
 
       function editJatahKelas(i) {
         let data = JSON.parse(localStorage.getItem("dataKelas")) || [];
-        let baru = prompt(
-          `Ubah Jumlah Jatah Ompreng untuk ${data[i].kelas}:`,
-          data[i].jumlah,
-        );
+        let baru = prompt(`Ubah Jumlah Jatah Ompreng untuk ${data[i].kelas}:`, data[i].jumlah);
         if (baru === null) return;
         let jml = parseInt(baru);
         if (isNaN(jml) || jml <= 0) return alert("Jumlah tidak valid!");
         data[i].jumlah = jml;
         localStorage.setItem("dataKelas", JSON.stringify(data));
         tampilKelas();
+        kirimDataKeCloud();
       }
 
       function hapusJatahKelas(i) {
@@ -1213,6 +1103,7 @@
           data.splice(i, 1);
           localStorage.setItem("dataKelas", JSON.stringify(data));
           tampilKelas();
+          kirimDataKeCloud();
         }
       }
 
@@ -1223,14 +1114,12 @@
 
       function simpanHilangKelas(i) {
         let data = JSON.parse(localStorage.getItem("dataKelas")) || [];
-        data[i].hilangTutup =
-          parseInt(document.getElementById(`lostT-${i}`).value) || 0;
-        data[i].hilangBawah =
-          parseInt(document.getElementById(`lostB-${i}`).value) || 0;
-        data[i].hilangSepaket =
-          parseInt(document.getElementById(`lostS-${i}`).value) || 0;
+        data[i].hilangTutup = parseInt(document.getElementById(`lostT-${i}`).value) || 0;
+        data[i].hilangBawah = parseInt(document.getElementById(`lostB-${i}`).value) || 0;
+        data[i].hilangSepaket = parseInt(document.getElementById(`lostS-${i}`).value) || 0;
         localStorage.setItem("dataKelas", JSON.stringify(data));
         tampilKelas();
+        kirimDataKeCloud();
       }
 
       function simpanCatatan(i) {
@@ -1239,6 +1128,7 @@
         localStorage.setItem("dataKelas", JSON.stringify(data));
         alert("Catatan tersimpan!");
         tampilKelas();
+        kirimDataKeCloud();
       }
 
       function ubahAmbil(i, s) {
@@ -1246,6 +1136,7 @@
         d[i].ambil = s;
         localStorage.setItem("dataKelas", JSON.stringify(d));
         hitungLogistik();
+        kirimDataKeCloud();
       }
 
       function ubahKembali(i, s) {
@@ -1253,14 +1144,13 @@
         d[i].kembali = s;
         localStorage.setItem("dataKelas", JSON.stringify(d));
         hitungLogistik();
+        kirimDataKeCloud();
       }
 
       function simpanStokMasuk() {
-        localStorage.setItem(
-          "stokMasuk",
-          parseInt(document.getElementById("stokMasuk").value) || 0,
-        );
+        localStorage.setItem("stokMasuk", parseInt(document.getElementById("stokMasuk").value) || 0);
         hitungLogistik();
+        kirimDataKeCloud();
         alert("Stok induk katering berhasil disimpan!");
       }
 
@@ -1271,15 +1161,12 @@
         let statusG = JSON.parse(localStorage.getItem("statusGuruAmbil")) || {};
         let riwayatG = JSON.parse(localStorage.getItem("riwayatGuru")) || [];
 
-        // MURNI 0 JIKA BARU RESET / BELUM ADA RIWAYAT DI-INPUT
         let jatahGuruSatuan = riwayatG.length > 0 ? riwayatG[0].jatah : 0;
 
         let totalJatahTerplot = 0;
         let totalKeluar = 0;
         let totalKembali = 0;
-        let lostT = 0,
-          lostB = 0,
-          lostS = 0;
+        let lostT = 0, lostB = 0, lostS = 0;
 
         let listBelumAmbilArr = [];
         let listBelumKembaliArr = [];
@@ -1292,7 +1179,6 @@
           if (!x.ambil) {
             listBelumAmbilArr.push(`${x.kelas} (${x.jumlah} Pcs)`);
           }
-
           if (x.ambil && !x.kembali) {
             let detailKasus = "";
             if (x.hilangTutup > 0 || x.hilangBawah > 0 || x.hilangSepaket > 0) {
@@ -1301,11 +1187,8 @@
             if (x.catatan && x.catatan.trim() !== "") {
               detailKasus += ` (Note: "${x.catatan}")`;
             }
-            listBelumKembaliArr.push(
-              `${x.kelas} (${x.jumlah} Pcs)${detailKasus}`,
-            );
+            listBelumKembaliArr.push(`${x.kelas} (${x.jumlah} Pcs)${detailKasus}`);
           }
-
           lostT += x.hilangTutup || 0;
           lostB += x.hilangBawah || 0;
           lostS += x.hilangSepaket || 0;
@@ -1349,18 +1232,10 @@
         document.getElementById("dashLostBawah").innerText = lostB;
         document.getElementById("dashLostSepaket").innerText = lostS;
 
-        document
-          .querySelectorAll(".class-global-masuk")
-          .forEach((el) => (el.innerText = totalJatahTerplot));
-        document
-          .querySelectorAll(".class-global-keluar")
-          .forEach((el) => (el.innerText = totalKeluar));
-        document
-          .querySelectorAll(".class-global-belum-kembali")
-          .forEach((el) => (el.innerText = belumKembali));
-        document
-          .querySelectorAll(".class-global-sisa-dapur")
-          .forEach((el) => (el.innerText = sisaDapur));
+        document.querySelectorAll(".class-global-masuk").forEach((el) => (el.innerText = totalJatahTerplot));
+        document.querySelectorAll(".class-global-keluar").forEach((el) => (el.innerText = totalKeluar));
+        document.querySelectorAll(".class-global-belum-kembali").forEach((el) => (el.innerText = belumKembali));
+        document.querySelectorAll(".class-global-sisa-dapur").forEach((el) => (el.innerText = sisaDapur));
 
         document.getElementById("dashInfoGuruPublik").innerHTML = `
           • Guru Hadir Terabsen: <b>${hadirGuru.length} Orang</b> <br/>
@@ -1370,31 +1245,22 @@
 
         if (listBelumAmbilArr.length > 0) {
           let liAmbil = "";
-          listBelumAmbilArr.forEach((item) => {
-            liAmbil += `⏳ ${item}<br/>`;
-          });
-          document.getElementById("dashListBelumAmbilPublik").innerHTML =
-            liAmbil;
+          listBelumAmbilArr.forEach((item) => { liAmbil += `⏳ ${item}<br/>`; });
+          document.getElementById("dashListBelumAmbilPublik").innerHTML = liAmbil;
         } else {
-          document.getElementById("dashListBelumAmbilPublik").innerHTML =
-            "<span class='text-success'>🟢 Semua jatah sudah diambil dari dapur.</span>";
+          document.getElementById("dashListBelumAmbilPublik").innerHTML = "<span class='text-success'>🟢 Semua jatah sudah diambil dari dapur.</span>";
         }
 
         if (listBelumKembaliArr.length > 0) {
           let liKembali = "";
-          listBelumKembaliArr.forEach((item) => {
-            liKembali += `⚠️ ${item}<br/>`;
-          });
-          document.getElementById("dashListBelumKembaliPublik").innerHTML =
-            liKembali;
+          listBelumKembaliArr.forEach((item) => { liKembali += `⚠️ ${item}<br/>`; });
+          document.getElementById("dashListBelumKembaliPublik").innerHTML = liKembali;
         } else {
-          document.getElementById("dashListBelumKembaliPublik").innerHTML =
-            "<span class='text-success'>🟢 Semua ompreng kembali bersih.</span>";
+          document.getElementById("dashListBelumKembaliPublik").innerHTML = "<span class='text-success'>🟢 Semua ompreng kembali bersih.</span>";
         }
 
         let persen = 0;
-        if (totalKeluar > 0)
-          persen = Math.round((totalKembali / totalKeluar) * 100);
+        if (totalKeluar > 0) persen = Math.round((totalKembali / totalKeluar) * 100);
         document.getElementById("dashProgressBar").style.width = persen + "%";
         document.getElementById("dashPersenTeks").innerText = persen + "%";
 
@@ -1409,39 +1275,32 @@
           elStatus.innerText = "Selesai Bersih!";
           elStatus.className = "badge bg-success text-white p-2";
         }
-
-        // OTOMATIS SYNC KE GOOGLE SHEETS SETIAP KALI LOGISTIK DIUPDATE
-        kirimDataKeCloud();
       }
 
       document.getElementById("btnHitung").onclick = function () {
         let sisa = parseInt(document.getElementById("sisaOmpreng").value);
         let hadir = JSON.parse(localStorage.getItem("guruHadir")) || [];
-        if (isNaN(sisa) || !hadir.length)
-          return alert("Periksa sisa masakan atau input hadir guru.");
+        if (isNaN(sisa) || !hadir.length) return alert("Periksa sisa masakan atau input hadir guru.");
 
         let jatah = Math.floor(sisa / hadir.length);
         let riwayat = JSON.parse(localStorage.getItem("riwayatGuru")) || [];
         riwayat.unshift({
           tanggal: new Date().toLocaleString(),
-          guru: hadir.length,
-          ompreng: sisa,
-          jatah: jatah,
+          guru: hadir.length, ompreng: sisa, jatah: jatah
         });
         localStorage.setItem("riwayatGuru", JSON.stringify(riwayat));
         tampilProsesGuru();
+        kirimDataKeCloud();
       };
 
       function tampilProsesGuru() {
         let hadir = JSON.parse(localStorage.getItem("guruHadir")) || [];
         let riwayatG = JSON.parse(localStorage.getItem("riwayatGuru")) || [];
 
-        let jatah = riwayatG.length > 0 ? riwayatG[0].jatah : 0; // Default Murni 0
+        let jatah = riwayatG.length > 0 ? riwayatG[0].jatah : 0; 
         let html = `<div class="alert alert-success fw-bold text-dark m-0 mb-3">Total Guru Hadir: ${hadir.length} | Hasil: <b>${jatah} Pcs / Orang</b></div>`;
         let statusG = JSON.parse(localStorage.getItem("statusGuruAmbil")) || {};
-        let kataKunci = document.getElementById("cariInputGuruProses")
-          ? document.getElementById("cariInputGuruProses").value.toLowerCase()
-          : "";
+        let kataKunci = document.getElementById("cariInputGuruProses") ? document.getElementById("cariInputGuruProses").value.toLowerCase() : "";
 
         hadir.forEach((nama, index) => {
           if (kataKunci && !nama.toLowerCase().includes(kataKunci)) return;
@@ -1468,51 +1327,43 @@
         statusG[nama][tipe] = status;
         localStorage.setItem("statusGuruAmbil", JSON.stringify(statusG));
         hitungLogistik();
+        kirimDataKeCloud();
       }
 
       function uploadDokumentasi() {
         const fileInput = document.getElementById("fotoInput");
         const keteranganInput = document.getElementById("fotoKeterangan");
 
-        if (!fileInput.files.length)
-          return alert("Silakan pilih file foto terlebih dahulu!");
+        if (!fileInput.files.length) return alert("Silakan pilih file foto terlebih dahulu!");
         const file = fileInput.files[0];
         const reader = new FileReader();
 
         reader.onload = function (e) {
           const base64Image = e.target.result;
-          let dataFoto =
-            JSON.parse(localStorage.getItem("dokumentasiFoto")) || [];
+          let dataFoto = JSON.parse(localStorage.getItem("dokumentasiFoto")) || [];
           dataFoto.unshift({
-            id: Date.now(),
-            image: base64Image,
-            keterangan:
-              keteranganInput.value || "Dokumentasi Menu Makan Bergizi Gratis",
-            tanggal: new Date().toLocaleDateString("id-ID"),
+            id: Date.now(), image: base64Image,
+            keterangan: keteranganInput.value || "Dokumentasi Menu Makan Bergizi Gratis",
+            tanggal: new Date().toLocaleDateString("id-ID")
           });
           localStorage.setItem("dokumentasiFoto", JSON.stringify(dataFoto));
-          keteranganInput.value = "";
-          fileInput.value = "";
-          alert("Foto menu berhasil dipublikasikan dengan skala asli!");
+          keteranganInput.value = ""; fileInput.value = "";
+          alert("Foto menu berhasil dipublikasikan!");
           tampilDokumentasi();
         };
         reader.readAsDataURL(file);
       }
 
       function tampilDokumentasi() {
-        let dataFoto =
-          JSON.parse(localStorage.getItem("dokumentasiFoto")) || [];
-        let htmlAdmin = "";
-        let htmlPublik = "";
+        let dataFoto = JSON.parse(localStorage.getItem("dokumentasiFoto")) || [];
+        let htmlAdmin = ""; let htmlPublik = "";
 
         if (dataFoto.length > 0) {
           dataFoto.forEach((f) => {
             htmlAdmin += `
               <div class="col-sm-6 col-md-4" id="foto-card-${f.id}">
                 <div class="card p-2 border">
-                  <div class="gallery-container">
-                    <img src="${f.image}" class="gallery-img"/>
-                  </div>
+                  <div class="gallery-container"><img src="${f.image}" class="gallery-img"/></div>
                   <small class="text-muted d-block mt-2">${f.tanggal}</small>
                   <p class="fw-bold text-dark mb-2">${f.keterangan}</p>
                   <button class="btn btn-sm btn-danger w-100 fw-bold" onclick="hapusFoto(${f.id})">Hapus Foto</button>
@@ -1522,9 +1373,7 @@
             htmlPublik += `
               <div class="col-sm-6 col-md-4">
                 <div class="card p-2 border h-100">
-                  <div class="gallery-container">
-                    <img src="${f.image}" class="gallery-img"/>
-                  </div>
+                  <div class="gallery-container"><img src="${f.image}" class="gallery-img"/></div>
                   <small class="text-muted d-block mt-2">${f.tanggal}</small>
                   <p class="fw-bold text-dark m-0" style="font-size:14px;">${f.keterangan}</p>
                 </div>
@@ -1535,15 +1384,13 @@
           htmlPublik = `<div class="col-12 text-center text-muted py-3">Belum ada foto menu ter-upload hari ini.</div>`;
           htmlAdmin = `<div class="col-12 text-center text-muted py-3">Belum ada foto dokumentasi.</div>`;
         }
-
         document.getElementById("listDokumentasiAdmin").innerHTML = htmlAdmin;
         document.getElementById("galeriPublik").innerHTML = htmlPublik;
       }
 
       function hapusFoto(id) {
         if (confirm("Hapus foto dokumentasi ini?")) {
-          let dataFoto =
-            JSON.parse(localStorage.getItem("dokumentasiFoto")) || [];
+          let dataFoto = JSON.parse(localStorage.getItem("dokumentasiFoto")) || [];
           dataFoto = dataFoto.filter((x) => x.id !== id);
           localStorage.setItem("dokumentasiFoto", JSON.stringify(dataFoto));
           tampilDokumentasi();
@@ -1554,14 +1401,11 @@
         let dataK = JSON.parse(localStorage.getItem("dataKelas")) || [];
         let txtKelas = `📝 SUMMARY TRANSAKSI KELAS HARI INI:\n`;
         dataK.forEach((x) => {
-          let detailHilang =
-            x.hilangTutup > 0 || x.hilangBawah > 0 || x.hilangSepaket > 0
-              ? ` [Hilang -> T:${x.hilangTutup}, B:${x.hilangBawah}, P:${x.hilangSepaket}]`
-              : "";
+          let detailHilang = x.hilangTutup > 0 || x.hilangBawah > 0 || x.hilangSepaket > 0
+              ? ` [Hilang -> T:${x.hilangTutup}, B:${x.hilangBawah}, P:${x.hilangSepaket}]` : "";
           txtKelas += `  - ${x.kelas} [${x.jumlah} Pcs] -> (Ambil: ${x.ambil ? "✓" : "✗"}, Kembali: ${x.kembali ? "✓" : "✗"})${detailHilang}\n`;
         });
-        document.getElementById("rekapKelasText").innerText =
-          txtKelas || "Belum ada transaksi kelas.";
+        document.getElementById("rekapKelasText").innerText = txtKelas || "Belum ada transaksi kelas.";
 
         let hadirGuru = JSON.parse(localStorage.getItem("guruHadir")) || [];
         let statusG = JSON.parse(localStorage.getItem("statusGuruAmbil")) || {};
@@ -1586,8 +1430,7 @@
             html += `<div class="item"><b>${x.tanggal}</b><br>Guru: ${x.guru} orang | Total Sisa: ${x.ompreng} Pcs | Jatah: ${x.jatah} Pcs</div>`;
           });
         } else {
-          html =
-            "<div class='alert alert-secondary'>Belum ada riwayat hitung guru hari ini.</div>";
+          html = "<div class='alert alert-secondary'>Belum ada riwayat hitung guru hari ini.</div>";
         }
         document.getElementById("isiRiwayat").innerHTML = html;
       }
@@ -1597,11 +1440,9 @@
         let keluar = document.getElementById("dashTotalKeluar").innerText;
         let belum = document.getElementById("dashBelumKembali").innerText;
         let sisa = document.getElementById("dashSisaDapur").innerText;
-
         let lT = document.getElementById("dashLostTutup").innerText;
         let lB = document.getElementById("dashLostBawah").innerText;
         let lS = document.getElementById("dashLostSepaket").innerText;
-
         let progres = document.getElementById("dashPersenTeks").innerText;
 
         let text = `*🚨 LAPORAN MONITOR LIVE DAPUR MBG SMK INFORMATIKA CBI*\n`;
@@ -1612,50 +1453,45 @@
         text += `🏠 *SISA AMAN DI DAPUR:* ${sisa} Pcs\n`;
         text += `🚪 *OMPRENG BELUM KEMBALI:* ${belum} Pcs\n`;
         text += `📈 *PROGRESS PENGEMBALIAN:* ${progres}\n\n`;
-
         text += `⚠️ *AKUMULASI KASUS KEHILANGAN OMPRENG:*\n`;
         text += `  - Hilang Tutup: ${lT} Pcs\n`;
         text += `  - Hilang Wadah Bawah: ${lB} Pcs\n`;
         text += `  - Hilang Sepaket (Total): ${lS} Pcs\n\n`;
-
         text += `------------------------------------\n`;
         text += `Laporan ini di-generate otomatis oleh sistem aplikasi dapur MBG CBI. Terima kasih.`;
 
-        let url =
-          "https://api.whatsapp.com/send?text=" + encodeURIComponent(text);
+        let url = "https://api.whatsapp.com/send?text=" + encodeURIComponent(text);
         window.open(url, "_blank");
       }
 
       function jalankanResetHarian() {
-        if (
-          !confirm(
-            "Reset total log harian? Semua data terdistribusi akan terhapus.",
-          )
-        )
-          return;
+        if (!confirm("Reset total log harian? Semua data terdistribusi akan terhapus.")) return;
         const mg = localStorage.getItem("masterGuru");
         const mk = localStorage.getItem("masterKelas");
         localStorage.clear();
         if (mg) localStorage.setItem("masterGuru", mg);
         if (mk) localStorage.setItem("masterKelas", mk);
+        
+        // Push pembersihan ke cloud
+        kirimDataKeCloud();
+        
         alert("Sistem berhasil dibersihkan!");
         location.reload();
       }
 
       window.onload = function () {
-        let savedStok = localStorage.getItem("stokMasuk");
-        if (savedStok && document.getElementById("stokMasuk")) {
-          document.getElementById("stokMasuk").value = savedStok;
-        }
-
         pasangPanelRealtime();
         renderKelasDropdown();
         renderGuru();
         renderMasterGuru();
         renderMasterKelas();
-        tampilKelas();
-        tampilProsesGuru();
+        
+        // Tarik data cloud pertama kali saat halaman dibuka
+        muatDataDariCloud();
         tampilDokumentasi();
+
+        // JALANKAN AUTO-REFRESH SETIAP 5 DETIK UNTUK PENGGUNA PUBLIK (HP GURU LAIN)
+        setInterval(muatDataDariCloud, 5000);
       };
     </script>
   </body>
